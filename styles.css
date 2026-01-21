@@ -682,13 +682,40 @@ ul, ol {
 
 /* Imagen responsive en móvil */
 @media (max-width: 767px) {
+    .hero {
+        min-height: auto;
+        padding-top: 120px;
+        padding-bottom: var(--space-16);
+    }
+
+    .hero__content {
+        gap: var(--space-8);
+    }
+
+    .hero__text {
+        text-align: center;
+    }
+
+    .hero__buttons {
+        justify-content: center;
+    }
+
+    .hero__stats {
+        justify-content: center;
+    }
+
     .hero__image-container {
         max-width: 100%;
         border-radius: var(--radius-xl);
     }
 
     .hero__visual {
-        padding: 0 var(--space-2);
+        padding: 0;
+        margin-top: var(--space-6);
+    }
+
+    .hero__scroll {
+        display: none;
     }
 }
 
