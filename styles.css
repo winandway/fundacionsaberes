@@ -680,44 +680,7 @@ ul, ol {
     50% { transform: translateY(-15px) rotate(1deg); }
 }
 
-/* Imagen responsive en móvil */
-@media (max-width: 767px) {
-    .hero {
-        min-height: auto;
-        padding-top: 120px;
-        padding-bottom: var(--space-16);
-    }
-
-    .hero__content {
-        gap: var(--space-8);
-    }
-
-    .hero__text {
-        text-align: center;
-    }
-
-    .hero__buttons {
-        justify-content: center;
-    }
-
-    .hero__stats {
-        justify-content: center;
-    }
-
-    .hero__image-container {
-        max-width: 100%;
-        border-radius: var(--radius-xl);
-    }
-
-    .hero__visual {
-        padding: 0;
-        margin-top: var(--space-6);
-    }
-
-    .hero__scroll {
-        display: none;
-    }
-}
+/* Estilos móvil movidos a sección responsive unificada */
 
 @media (min-width: 768px) {
     .hero__title {
@@ -2086,8 +2049,68 @@ html {
     outline-offset: 2px;
 }
 
-/* Touch targets más grandes en móvil */
+/* ===== MÓVIL GENERAL (hasta 767px) ===== */
 @media (max-width: 767px) {
+    /* Hero móvil */
+    .hero {
+        min-height: auto !important;
+        padding-top: 110px !important;
+        padding-bottom: var(--space-12) !important;
+    }
+
+    .hero__content {
+        gap: var(--space-6) !important;
+    }
+
+    .hero__text {
+        text-align: center !important;
+    }
+
+    .hero__buttons {
+        justify-content: center !important;
+    }
+
+    .hero__stats {
+        justify-content: center !important;
+        flex-wrap: wrap;
+        gap: var(--space-4);
+    }
+
+    .hero__stat {
+        min-width: 70px;
+        text-align: center;
+    }
+
+    /* IMPORTANTE: Asegurar que la imagen sea visible */
+    .hero__visual {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-top: var(--space-6) !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    .hero__image-container {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: var(--radius-lg) !important;
+        margin: 0 !important;
+    }
+
+    .hero__image {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+    }
+
+    .hero__scroll {
+        display: none !important;
+    }
+
+    /* Touch targets */
     .btn {
         min-height: 48px;
         padding: var(--space-4) var(--space-6);
